@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plant Shop - Browse</title>
+
+    <!-- Style Sheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/main.css">
+
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="../scripts/main.js"></script>
+
+  </head>
+  <body>
+
+    <!-- ------------------------------------------------------------------------------------------------ -->
+    <!-- Nav Bar -->
+
+    <nav class="navbar fixed-top">
+      <div class="container">
+        
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img src="../assets/Logo.svg" alt="Logo" height="32">
+        </a>
+
+        <!-- Nav Items -->
+        <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="../pages/browse.html">Browse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="../pages/wishlist.html">Wishlist</a>
+            </li>
+          </ul>
+
+      </div>
+    </nav>
+
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <!-- Table -->
+
+    <div class="container mt-5 pt-5">
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col-1">#</th>
+                <th scope="col-6">Image</th>
+                <th scope="col-3">Plant Name</th>
+                <th scope="col-2">Remove</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td ><img class="wishlist-img" src="../assets/house-plant-0M3OKRF-600.jpg"></td>
+                <td><div class="item-name"> Houseplant 1</div></td>
+                <td><img class="remove-icon" src="../assets/remove.png"></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td><img class="wishlist-img" src="../assets/house-plant-0M3OKRF-600.jpg"></td>
+                <td><div class="item-name"> Houseplant 2</div></td>
+                <td><img class="remove-icon" src="../assets/remove.png"></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td ><img class="wishlist-img" src="../assets/house-plant-0M3OKRF-600.jpg"></td>
+                <td><div class="item-name"> Houseplant 3</div></td>
+                <td><img class="remove-icon" src="../assets/remove.png"></td>
+              </tr>
+            </tbody>
+          </table>
+
+    </div>
+
+    
+    
+
+  </body>
+</html>
