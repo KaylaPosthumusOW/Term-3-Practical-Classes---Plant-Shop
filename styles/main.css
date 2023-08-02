@@ -99,6 +99,10 @@ button {
 }
 
 /* Accordion */
+
+.accordion{
+    margin-bottom: 100px;
+}
 .sub-heading{
     width: 60%;
     margin: 0 auto;
@@ -127,6 +131,15 @@ button {
 }
 
 /* Table */
+.table{
+    margin-top: 50px;
+    border: solid 2px #11271e;
+}
+
+.table-success{
+    border-bottom: solid 2px #11271e;
+}
+
 .wishlist-img{
     width: auto;
     height: 100px;
@@ -135,13 +148,20 @@ button {
 
 .remove-icon{
     width: auto;
-    height: 30px;
+    height: 20px;
     margin: 0 auto;
     margin-top: 40px;
+    margin-left: 30px;
 }
     
 .item-name{
     margin-top: 30px;
+}
+
+.background{
+    background-color:#18382B;
+    color: white;
+    /* width: 100%; */
 }
 
 
@@ -156,14 +176,14 @@ button {
 }
 
 .color-block{
-    background-color: #405144;
+    background-color: #11271e;
     height: 90vh;
     margin-right: -20%;
     margin-top: 10vh;
 }
 
 .secondary-image{
-    height: 90vh;
+    height: 60vh;
     margin-left: -35%;
     margin-bottom: -800px;
 }

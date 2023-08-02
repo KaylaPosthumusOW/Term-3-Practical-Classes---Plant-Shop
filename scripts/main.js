@@ -28,3 +28,11 @@ $(document).ready(function(){
     $(".card-img-top").toggleClass("small");
 
   });
+
+  $(document).ready(function() {
+    // Handle click event on the remove icons
+    $(".remove-icon").on("click", function() {
+      // Find the closest parent <tr> element and remove it
+      $(this).closest("tr").remove();
+    });
+  });
