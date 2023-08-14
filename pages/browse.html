@@ -5,15 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Plant Shop - Browse</title>
 
-    <!-- Style Sheets -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/main.css">
+   <!-- Style Sheets -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+   <link rel="stylesheet" href="../styles/main.css">
 
-    <!-- Javascript -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="../scripts/main.js"></script>
+    
 
   </head>
   <body>
@@ -50,23 +46,66 @@
         <!-- Header -->
         <h2>Browse Plants</h2>
 
-        <!-- Plant List Cards -->
-        <div class="row pt-5">
-          <div class="col-4">
+        <!-- Filters and Sorts -->
+        <div class="row">
 
-            <!-- Card -->
-            <div class="card">
-              <img src="../assets/plant1.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h4 class="card-title">Ficus Tree</h4>
-                <p class="card-text" id="priceText">R320</p>
-                <p class="card-text mt-4" id="descriptionText">Graceful and lush, this charming indoor plant boasts glossy, emerald-green leaves that effortlessly brighten any space. Easy to care for and standing at an ideal height, our Ficus Tree is the perfect addition to elevate your interior décor.</p>
+          <!-- Filter radio Options -->
+          <div class="btn-group col-auto" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="filterRadio" id="allPlantsFilter" value="" autocomplete="off" checked>
+            <label class="btn btn-outline-success" for="allPlantsFilter">All Plants</label>
+          
+            <input type="radio" class="btn-check" name="filterRadio" id="brightLightFilter" value="bright" autocomplete="off">
+            <label class="btn btn-outline-success" for="brightLightFilter">Bright Light</label>
+          
+            <input type="radio" class="btn-check" name="filterRadio" id="lowLightFilter" value="low" autocomplete="off">
+            <label class="btn btn-outline-success" for="lowLightFilter">Low Light</label>
+
+            <input type="radio" class="btn-check" name="filterRadio" id="filterOnSale" value="onSale" autocomplete="off">
+            <label class="btn btn-outline-success" for="lowLightFilter">On Sale</label>
+          </div>
+
+          <!-- Sort radio Options -->
+          <div class="btn-group col-auto" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="sortRadio" id="defaultSort" value="date added" autocomplete="off" checked>
+            <label class="btn btn-outline-secondary" for="allPlantsFilter">Newest to Oldest</label>
+          
+            <input type="radio" class="btn-check" name="sortRadio" id="priceSort" value="low to high" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="brightLightFilter">Newest to Oldest</label>
+           
+            <input type="radio" class="btn-check" name="sortRadio" id="sortAlphabetically" value="" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="priceSort">Alphabetically</label>
+          
+          </div>
+
+        </div>
+
+        <!-- Plant List Cards -->
+        <div class="row py-5 gy-3" id="plantsContainer">
+
+        <!-- Browse Card template -->
+          <template id="plantCardTemplate">
+            <div class="col-4">
+
+              <!-- Card -->
+              <div class="card">
+                <img src="../assets/plant1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title" id="nameText">Ficus Tree</h4>
+                  <p class="card-text" id="priceText">R320</p>
+                  <p class="card-text mt-4" id="descriptionText">Graceful and lush, this charming indoor plant boasts glossy, emerald-green leaves that effortlessly brighten any space. Easy to care for and standing at an ideal height, our Ficus Tree is the perfect addition to elevate your interior décor.</p>
+                </div>
               </div>
             </div>
-          </div>
+          </template>   
         </div>
 
     </div>
+
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="../scripts/main.js"></script>
     
 
     
